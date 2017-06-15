@@ -1,1 +1,4 @@
-<h1>show post</h1>
+<h1><%= @post.title %></h1>
+<small><%= @post.created_at.strftime("%b %d, %Y")%></small>
+<h5><%= @post.body%></h5>
+	

@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
 	def index
+		@posts=Post.all
+	end
+
+	def show
+		@post=Post.find_by(id: params[:id])
 	end
 
 	def new
@@ -14,7 +19,6 @@ class PostsController < ApplicationController
 	def update
 	end
 
-	def show
-	end
+	
 
 end

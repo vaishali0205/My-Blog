@@ -1,2 +1,8 @@
 <h1> Welcome to your feed </h1>
-<h3> Post 1</h3>
+<% @posts.each do |post| %>
+<h3> 
+<a href="/posts/<%=post.id%>"><%= post.title %></a>
+</h3>
+<h5><%=post.body%></h5>
+<% end %>
+
