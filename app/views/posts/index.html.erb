@@ -1,8 +1,8 @@
 <h1> Welcome to your feed </h1>
 <% @posts.each do |post| %>
 <h3> 
-<a href="/posts/<%=post.id%>"><%= post.title %></a>
+ <%= link_to post.title,post_path(post) %>
 </h3>
 <h5><%=post.body%></h5>
 <% end %>
-
+<%= link_to "Add new post",new_post_path %>
