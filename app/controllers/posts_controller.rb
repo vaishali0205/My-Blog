@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 	end
 
 	def post_params
-		params.require(:post).permit(:title,:body,:category)
+		params.require(:post).permit(:title,:body,:category_id)
 	end
 
 	def edit
@@ -41,6 +41,7 @@ class PostsController < ApplicationController
 	def destroy
 		@post=Post.find_by_id(params[:id])
 		@post.destroy
+		redirect_to posts_path
 	end
 
 end
