@@ -10,5 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+  	@categories=Category.find(params[:id])
+  	@posts=@categories.posts
   end
 end
